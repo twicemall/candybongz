@@ -1,0 +1,224 @@
+$main: #6e181d
+$sub: #daae4c
+$shopee: #ee4d2d
+
+body
+  background: $primary
+  background: -moz-linear-gradient(-45deg, rgba($primary,.8) 0%, rgba($secondary,.8) 100%)
+  background: -webkit-linear-gradient(-45deg, rgba($primary,.8) 0%,rgba($secondary,.8) 100%)
+  background: linear-gradient(135deg, rgba($primary,.8) 0%,rgba($secondary,.8) 100%)
+
+ol, ul, li
+  padding-left: 0
+  margin-left: 10px
+
+.keyvisual
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  padding: 0
+  overflow: hidden
+  line-height: 0
+  &__inner
+    height: 100%
+    background: url("../../dist/images/logo.png") no-repeat
+    background-position-x: 50%
+    background-position-y: 25px
+    background-size: 260px
+    +md-up
+      background-position-y: 60px
+      background-size: 380px
+
+.content
+  position: relative
+  top: 220px
+  background: lighten($secondary,17%)
+  // background: -webkit-linear-gradient(top, $white 0%, $white 8%, #fff3e1 100%)
+  // background: linear-gradient(to bottom, $white 0%, $white 8%, #fff3e1 100%)
+  +md-up
+    top: 370px
+  .container
+    padding-top: 6rem
+    padding-bottom: 6rem
+  &__heading
+    padding-bottom: 3rem
+    margin-top: -3rem
+    +md-up
+      margin-top: -2rem
+    h5
+      margin-bottom: .8rem
+      font-size: 1.2rem
+      font-weight: 500
+      color: $primary
+    h1
+      margin-bottom: .5rem
+      font-size: 1.9rem
+      color: $black
+      line-height: 1.45
+      +md-up
+        font-size: 2.2rem
+    h2
+      font-size: .95rem
+      font-weight: 300
+      color: $black
+      line-height: 1.6
+    #countdown
+      margin-left: .7rem
+      font-size: 1.6rem
+      font-weight: 600
+      color: $primary
+      span
+        margin-right: .8rem
+        margin-left: .3rem
+        font-size: .9rem
+        font-weight: 300
+        color: $black
+  &__conditions
+    padding: 30px 24px
+    margin-bottom: 1rem
+    background: $white
+    border-radius: $border-radius
+    box-shadow: 0 8px 15px rgba(0,0,0,.04)
+    +md-up
+      padding: 36px 30px
+    +lg-up
+      padding: 40px 36px
+    a
+      padding-bottom: 1px
+      border-bottom: 1px solid
+    h3
+      margin-bottom: .8rem
+      font-size: 1.4rem
+      + .subheading
+        margin-top: 1.2rem
+    .subheading
+      display: block
+      padding-bottom: .2rem
+      margin: 2.5rem 0 .8rem
+      font-size: 1.15rem
+      font-weight: 500
+      border-bottom: 2px solid
+      &__shopee
+        color: $shopee
+        border-color: $shopee
+      &__cvs
+        color: green
+        border-color: green
+
+.miniCart
+  &__card
+    margin-bottom: 2rem
+    > div
+      padding: 12px
+      background: $white
+      border-radius: .4rem
+      box-shadow: 0 8px 15px rgba(0,0,0,.04)
+  .tag
+    position: absolute
+    padding: 0 10px
+    font-size: .7rem
+    color: white
+    border-radius: 2px
+    // &--fc
+    //   background: rgba($primary,.5)
+    // &--venue
+    //   background: $main
+  // override
+  .liteshop-order-container
+    padding: 0
+    margin: 0
+    box-shadow: none
+    h3.form-heading
+      margin: 18px 0
+      font-size: 1rem
+      font-weight: 700
+      text-align: center
+    h4.form-heading-descript
+      display: none
+    // 下拉選單
+    .col-6
+      width: 100%
+      max-width: 100%
+      -webkit-box-flex: initial
+      -ms-flex: initial
+      flex: initial
+      .liteshop-form-group.form-select,
+      .liteshop-form-group.form-default-value
+        height: 52px
+        margin-bottom: 12px
+        &:hover
+          border-color: $primary !important
+        &::after
+          content: '' !important
+        // 請選擇
+        .label-at-top
+          padding-left: 12px
+          margin-top: 5px
+          font-size: .7rem
+        // 請選擇的下一排
+        .liteshop-form-control
+          padding: 24px 12px 0 !important
+          font-size: .85rem
+          font-weight: 500
+          +sm-down
+            font-size: 16px
+    .cart-btn-wrap
+      .btn-warp
+        margin-right: 0
+        margin-left: 0
+        .btn-group
+          float: initial
+          width: calc((100% - 12px) / 2)
+          padding-right: 0
+          padding-left: 0
+          margin-top: 0
+          &:first-child
+            margin-right: 12px
+          &:last-child
+            display: none
+          .liteshop-btn
+            font-size: .9rem
+            .ls-badge
+              min-width: 26px
+              padding: 0
+              line-height: 1.2
+              background: rgba(0,0,0,.2)
+              box-shadow: none
+            &.btn-add-cart
+              padding: 14px 12px 13px
+              font-weight: 500
+              color: $white
+              +linear-gradient--leftTopRightBottom($primary,$secondary)
+              border: none
+              +md-up
+                padding: 11px 12px 10px
+                font-weight: 400
+              &:hover, &:focus, &:active, &.active
+                // background: darken($primary,5%)
+                // border-color: darken($primary,5%)
+            &.liteshop-checkout-btn
+              padding: 13px 12px 12px
+              font-weight: 500
+              color: $primary
+              background: $white
+              border: 1px solid $primary
+              +md-up
+                padding: 10px 12px 9px
+                font-weight: 400
+              &:hover, &:focus, &:active, &.active
+                color: $white
+                background: $primary
+                border-color: $primary
+    .cart-footer
+      display: none
+
+footer
+  font-size: 90%
+  img
+    display: inline-block
+    margin-top: .5rem
+
+// Bootstrap and its default variables
+// @import "bootstrap/bootstrap"
